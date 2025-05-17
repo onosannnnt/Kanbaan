@@ -1,0 +1,2976 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "kanban",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "tags": [],
+  "paths": {
+    "/users/register": {
+      "post": {
+        "summary": "register",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {
+                "email": "test@gmail.com",
+                "password": "12345Aa.",
+                "firstname": "santijit",
+                "lastname": "kumnuk"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/users/login": {
+      "post": {
+        "summary": "login",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {
+                "email": "test@gmail.com",
+                "password": "12345Aa."
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "token": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "token"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "summary": "get one by id",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "CreatedAt": {
+                          "type": "string"
+                        },
+                        "UpdatedAt": {
+                          "type": "string"
+                        },
+                        "DeletedAt": {
+                          "type": "null"
+                        },
+                        "ID": {
+                          "type": "string"
+                        },
+                        "Email": {
+                          "type": "string"
+                        },
+                        "Password": {
+                          "type": "string"
+                        },
+                        "FirstName": {
+                          "type": "string"
+                        },
+                        "LastName": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "CreatedAt",
+                        "UpdatedAt",
+                        "DeletedAt",
+                        "ID",
+                        "Email",
+                        "Password",
+                        "FirstName",
+                        "LastName"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/users/": {
+      "put": {
+        "summary": "update",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {
+                "firstname": "santijit"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "CreatedAt": {
+                          "type": "string"
+                        },
+                        "UpdatedAt": {
+                          "type": "string"
+                        },
+                        "DeletedAt": {
+                          "type": "null"
+                        },
+                        "ID": {
+                          "type": "string"
+                        },
+                        "Email": {
+                          "type": "string"
+                        },
+                        "Password": {
+                          "type": "string"
+                        },
+                        "FirstName": {
+                          "type": "string"
+                        },
+                        "LastName": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "CreatedAt",
+                        "UpdatedAt",
+                        "DeletedAt",
+                        "ID",
+                        "Email",
+                        "Password",
+                        "FirstName",
+                        "LastName"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      },
+      "delete": {
+        "summary": "delete",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/users/logout": {
+      "post": {
+        "summary": "logout",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "null"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/users/me": {
+      "get": {
+        "summary": "get me",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "null"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/users/me/boards/": {
+      "get": {
+        "summary": "get my board",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "CreatedAt": {
+                            "type": "string"
+                          },
+                          "UpdatedAt": {
+                            "type": "string"
+                          },
+                          "DeletedAt": {
+                            "type": "null"
+                          },
+                          "ID": {
+                            "type": "string"
+                          },
+                          "Name": {
+                            "type": "string"
+                          },
+                          "OwnerID": {
+                            "type": "string"
+                          },
+                          "Owner": {
+                            "type": "object",
+                            "properties": {
+                              "CreatedAt": {
+                                "type": "string"
+                              },
+                              "UpdatedAt": {
+                                "type": "string"
+                              },
+                              "DeletedAt": {
+                                "type": "null"
+                              },
+                              "ID": {
+                                "type": "string"
+                              },
+                              "Email": {
+                                "type": "string"
+                              },
+                              "Password": {
+                                "type": "string"
+                              },
+                              "FirstName": {
+                                "type": "string"
+                              },
+                              "LastName": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "CreatedAt",
+                              "UpdatedAt",
+                              "DeletedAt",
+                              "ID",
+                              "Email",
+                              "Password",
+                              "FirstName",
+                              "LastName"
+                            ]
+                          },
+                          "Members": {
+                            "type": "null"
+                          }
+                        }
+                      }
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/users/me/boards/colab": {
+      "get": {
+        "summary": "Get my colabs",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "CreatedAt": {
+                            "type": "string"
+                          },
+                          "UpdatedAt": {
+                            "type": "string"
+                          },
+                          "DeletedAt": {
+                            "type": "null"
+                          },
+                          "ID": {
+                            "type": "string"
+                          },
+                          "Name": {
+                            "type": "string"
+                          },
+                          "OwnerID": {
+                            "type": "string"
+                          },
+                          "Owner": {
+                            "type": "object",
+                            "properties": {
+                              "CreatedAt": {
+                                "type": "string"
+                              },
+                              "UpdatedAt": {
+                                "type": "string"
+                              },
+                              "DeletedAt": {
+                                "type": "null"
+                              },
+                              "ID": {
+                                "type": "string"
+                              },
+                              "Email": {
+                                "type": "string"
+                              },
+                              "Password": {
+                                "type": "string"
+                              },
+                              "FirstName": {
+                                "type": "string"
+                              },
+                              "LastName": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "CreatedAt",
+                              "UpdatedAt",
+                              "DeletedAt",
+                              "ID",
+                              "Email",
+                              "Password",
+                              "FirstName",
+                              "LastName"
+                            ]
+                          },
+                          "Members": {
+                            "type": "null"
+                          }
+                        }
+                      }
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/boards": {
+      "post": {
+        "summary": "create",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {
+                "name": "test"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "CreatedAt": {
+                          "type": "string"
+                        },
+                        "UpdatedAt": {
+                          "type": "string"
+                        },
+                        "DeletedAt": {
+                          "type": "null"
+                        },
+                        "ID": {
+                          "type": "string"
+                        },
+                        "Name": {
+                          "type": "string"
+                        },
+                        "OwnerID": {
+                          "type": "string"
+                        },
+                        "Owner": {
+                          "type": "object",
+                          "properties": {
+                            "CreatedAt": {
+                              "type": "string"
+                            },
+                            "UpdatedAt": {
+                              "type": "string"
+                            },
+                            "DeletedAt": {
+                              "type": "null"
+                            },
+                            "ID": {
+                              "type": "string"
+                            },
+                            "Email": {
+                              "type": "string"
+                            },
+                            "Password": {
+                              "type": "string"
+                            },
+                            "FirstName": {
+                              "type": "string"
+                            },
+                            "LastName": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "CreatedAt",
+                            "UpdatedAt",
+                            "DeletedAt",
+                            "ID",
+                            "Email",
+                            "Password",
+                            "FirstName",
+                            "LastName"
+                          ]
+                        },
+                        "Members": {
+                          "type": "null"
+                        }
+                      },
+                      "required": [
+                        "CreatedAt",
+                        "UpdatedAt",
+                        "DeletedAt",
+                        "ID",
+                        "Name",
+                        "OwnerID",
+                        "Owner",
+                        "Members"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      },
+      "get": {
+        "summary": "get all",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "CreatedAt": {
+                            "type": "string"
+                          },
+                          "UpdatedAt": {
+                            "type": "string"
+                          },
+                          "DeletedAt": {
+                            "type": "null"
+                          },
+                          "ID": {
+                            "type": "string"
+                          },
+                          "Name": {
+                            "type": "string"
+                          },
+                          "OwnerID": {
+                            "type": "string"
+                          },
+                          "Owner": {
+                            "type": "object",
+                            "properties": {
+                              "CreatedAt": {
+                                "type": "string"
+                              },
+                              "UpdatedAt": {
+                                "type": "string"
+                              },
+                              "DeletedAt": {
+                                "type": "null"
+                              },
+                              "ID": {
+                                "type": "string"
+                              },
+                              "Email": {
+                                "type": "string"
+                              },
+                              "Password": {
+                                "type": "string"
+                              },
+                              "FirstName": {
+                                "type": "string"
+                              },
+                              "LastName": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "CreatedAt",
+                              "UpdatedAt",
+                              "DeletedAt",
+                              "ID",
+                              "Email",
+                              "Password",
+                              "FirstName",
+                              "LastName"
+                            ]
+                          },
+                          "Members": {
+                            "type": "null"
+                          }
+                        }
+                      }
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/boards/{id}": {
+      "get": {
+        "summary": "get by id",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "1b01c7d7-3a41-4fa5-8c4a-962f9a666545",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "CreatedAt": {
+                          "type": "string"
+                        },
+                        "UpdatedAt": {
+                          "type": "string"
+                        },
+                        "DeletedAt": {
+                          "type": "null"
+                        },
+                        "ID": {
+                          "type": "string"
+                        },
+                        "Name": {
+                          "type": "string"
+                        },
+                        "OwnerID": {
+                          "type": "string"
+                        },
+                        "Owner": {
+                          "type": "object",
+                          "properties": {
+                            "CreatedAt": {
+                              "type": "string"
+                            },
+                            "UpdatedAt": {
+                              "type": "string"
+                            },
+                            "DeletedAt": {
+                              "type": "null"
+                            },
+                            "ID": {
+                              "type": "string"
+                            },
+                            "Email": {
+                              "type": "string"
+                            },
+                            "Password": {
+                              "type": "string"
+                            },
+                            "FirstName": {
+                              "type": "string"
+                            },
+                            "LastName": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "CreatedAt",
+                            "UpdatedAt",
+                            "DeletedAt",
+                            "ID",
+                            "Email",
+                            "Password",
+                            "FirstName",
+                            "LastName"
+                          ]
+                        },
+                        "Members": {
+                          "type": "null"
+                        }
+                      },
+                      "required": [
+                        "CreatedAt",
+                        "UpdatedAt",
+                        "DeletedAt",
+                        "ID",
+                        "Name",
+                        "OwnerID",
+                        "Owner",
+                        "Members"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      },
+      "put": {
+        "summary": "update",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "c31244fd-f343-442a-bd55-f44d24ec91d2",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {
+                "name": "test2"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "CreatedAt": {
+                          "type": "string"
+                        },
+                        "UpdatedAt": {
+                          "type": "string"
+                        },
+                        "DeletedAt": {
+                          "type": "null"
+                        },
+                        "ID": {
+                          "type": "string"
+                        },
+                        "Name": {
+                          "type": "string"
+                        },
+                        "OwnerID": {
+                          "type": "string"
+                        },
+                        "Owner": {
+                          "type": "object",
+                          "properties": {
+                            "CreatedAt": {
+                              "type": "string"
+                            },
+                            "UpdatedAt": {
+                              "type": "string"
+                            },
+                            "DeletedAt": {
+                              "type": "null"
+                            },
+                            "ID": {
+                              "type": "string"
+                            },
+                            "Email": {
+                              "type": "string"
+                            },
+                            "Password": {
+                              "type": "string"
+                            },
+                            "FirstName": {
+                              "type": "string"
+                            },
+                            "LastName": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "CreatedAt",
+                            "UpdatedAt",
+                            "DeletedAt",
+                            "ID",
+                            "Email",
+                            "Password",
+                            "FirstName",
+                            "LastName"
+                          ]
+                        },
+                        "Members": {
+                          "type": "null"
+                        }
+                      },
+                      "required": [
+                        "CreatedAt",
+                        "UpdatedAt",
+                        "DeletedAt",
+                        "ID",
+                        "Name",
+                        "OwnerID",
+                        "Owner",
+                        "Members"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      },
+      "delete": {
+        "summary": "delete",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "c31244fd-f343-442a-bd55-f44d24ec91d2",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/boards/{id}/invites": {
+      "post": {
+        "summary": "invite to board",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "890aa92a-debd-472e-bba3-02723f9a5d89",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {
+                "members": [
+                  "test1@gmail.com"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "CreatedAt": {
+                            "type": "string"
+                          },
+                          "UpdatedAt": {
+                            "type": "string"
+                          },
+                          "DeletedAt": {
+                            "type": "null"
+                          },
+                          "ID": {
+                            "type": "string"
+                          },
+                          "Name": {
+                            "type": "string"
+                          },
+                          "OwnerID": {
+                            "type": "string"
+                          },
+                          "Owner": {
+                            "type": "object",
+                            "properties": {
+                              "CreatedAt": {
+                                "type": "string"
+                              },
+                              "UpdatedAt": {
+                                "type": "string"
+                              },
+                              "DeletedAt": {
+                                "type": "null"
+                              },
+                              "ID": {
+                                "type": "string"
+                              },
+                              "Email": {
+                                "type": "string"
+                              },
+                              "Password": {
+                                "type": "string"
+                              },
+                              "FirstName": {
+                                "type": "string"
+                              },
+                              "LastName": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "CreatedAt",
+                              "UpdatedAt",
+                              "DeletedAt",
+                              "ID",
+                              "Email",
+                              "Password",
+                              "FirstName",
+                              "LastName"
+                            ]
+                          },
+                          "Members": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "CreatedAt": {
+                                  "type": "string"
+                                },
+                                "UpdatedAt": {
+                                  "type": "string"
+                                },
+                                "DeletedAt": {
+                                  "type": "null"
+                                },
+                                "ID": {
+                                  "type": "string"
+                                },
+                                "Email": {
+                                  "type": "string"
+                                },
+                                "Password": {
+                                  "type": "string"
+                                },
+                                "FirstName": {
+                                  "type": "string"
+                                },
+                                "LastName": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/columns": {
+      "post": {
+        "summary": "create",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {
+                "name": "Test column",
+                "board_id": "1b01c7d7-3a41-4fa5-8c4a-962f9a666545"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "CreatedAt": {
+                          "type": "string"
+                        },
+                        "UpdatedAt": {
+                          "type": "string"
+                        },
+                        "DeletedAt": {
+                          "type": "null"
+                        },
+                        "ID": {
+                          "type": "string"
+                        },
+                        "Name": {
+                          "type": "string"
+                        },
+                        "board_id": {
+                          "type": "string"
+                        },
+                        "Board": {
+                          "type": "object",
+                          "properties": {
+                            "CreatedAt": {
+                              "type": "string"
+                            },
+                            "UpdatedAt": {
+                              "type": "string"
+                            },
+                            "DeletedAt": {
+                              "type": "null"
+                            },
+                            "ID": {
+                              "type": "string"
+                            },
+                            "Name": {
+                              "type": "string"
+                            },
+                            "OwnerID": {
+                              "type": "string"
+                            },
+                            "Owner": {
+                              "type": "object",
+                              "properties": {
+                                "CreatedAt": {
+                                  "type": "string"
+                                },
+                                "UpdatedAt": {
+                                  "type": "string"
+                                },
+                                "DeletedAt": {
+                                  "type": "null"
+                                },
+                                "ID": {
+                                  "type": "string"
+                                },
+                                "Email": {
+                                  "type": "string"
+                                },
+                                "Password": {
+                                  "type": "string"
+                                },
+                                "FirstName": {
+                                  "type": "string"
+                                },
+                                "LastName": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "CreatedAt",
+                                "UpdatedAt",
+                                "DeletedAt",
+                                "ID",
+                                "Email",
+                                "Password",
+                                "FirstName",
+                                "LastName"
+                              ]
+                            },
+                            "Members": {
+                              "type": "null"
+                            },
+                            "Columns": {
+                              "type": "null"
+                            }
+                          },
+                          "required": [
+                            "CreatedAt",
+                            "UpdatedAt",
+                            "DeletedAt",
+                            "ID",
+                            "Name",
+                            "OwnerID",
+                            "Owner",
+                            "Members",
+                            "Columns"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "CreatedAt",
+                        "UpdatedAt",
+                        "DeletedAt",
+                        "ID",
+                        "Name",
+                        "board_id",
+                        "Board"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/columns/4fbc885c-69eb-41db-a2e1-8edc761aa4ca": {
+      "get": {
+        "summary": "get one by id",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {
+                "name": "Test board create column"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "CreatedAt": {
+                          "type": "string"
+                        },
+                        "UpdatedAt": {
+                          "type": "string"
+                        },
+                        "DeletedAt": {
+                          "type": "null"
+                        },
+                        "ID": {
+                          "type": "string"
+                        },
+                        "Name": {
+                          "type": "string"
+                        },
+                        "board_id": {
+                          "type": "string"
+                        },
+                        "Board": {
+                          "type": "object",
+                          "properties": {
+                            "CreatedAt": {
+                              "type": "string"
+                            },
+                            "UpdatedAt": {
+                              "type": "string"
+                            },
+                            "DeletedAt": {
+                              "type": "null"
+                            },
+                            "ID": {
+                              "type": "string"
+                            },
+                            "Name": {
+                              "type": "string"
+                            },
+                            "OwnerID": {
+                              "type": "string"
+                            },
+                            "Owner": {
+                              "type": "object",
+                              "properties": {
+                                "CreatedAt": {
+                                  "type": "string"
+                                },
+                                "UpdatedAt": {
+                                  "type": "string"
+                                },
+                                "DeletedAt": {
+                                  "type": "null"
+                                },
+                                "ID": {
+                                  "type": "string"
+                                },
+                                "Email": {
+                                  "type": "string"
+                                },
+                                "Password": {
+                                  "type": "string"
+                                },
+                                "FirstName": {
+                                  "type": "string"
+                                },
+                                "LastName": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "CreatedAt",
+                                "UpdatedAt",
+                                "DeletedAt",
+                                "ID",
+                                "Email",
+                                "Password",
+                                "FirstName",
+                                "LastName"
+                              ]
+                            },
+                            "Members": {
+                              "type": "null"
+                            },
+                            "Columns": {
+                              "type": "null"
+                            }
+                          },
+                          "required": [
+                            "CreatedAt",
+                            "UpdatedAt",
+                            "DeletedAt",
+                            "ID",
+                            "Name",
+                            "OwnerID",
+                            "Owner",
+                            "Members",
+                            "Columns"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "CreatedAt",
+                        "UpdatedAt",
+                        "DeletedAt",
+                        "ID",
+                        "Name",
+                        "board_id",
+                        "Board"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      },
+      "put": {
+        "summary": "update",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {
+                "name": "test update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "CreatedAt": {
+                          "type": "string"
+                        },
+                        "UpdatedAt": {
+                          "type": "string"
+                        },
+                        "DeletedAt": {
+                          "type": "null"
+                        },
+                        "ID": {
+                          "type": "string"
+                        },
+                        "Name": {
+                          "type": "string"
+                        },
+                        "board_id": {
+                          "type": "string"
+                        },
+                        "Board": {
+                          "type": "object",
+                          "properties": {
+                            "CreatedAt": {
+                              "type": "string"
+                            },
+                            "UpdatedAt": {
+                              "type": "string"
+                            },
+                            "DeletedAt": {
+                              "type": "null"
+                            },
+                            "ID": {
+                              "type": "string"
+                            },
+                            "Name": {
+                              "type": "string"
+                            },
+                            "OwnerID": {
+                              "type": "string"
+                            },
+                            "Owner": {
+                              "type": "object",
+                              "properties": {
+                                "CreatedAt": {
+                                  "type": "string"
+                                },
+                                "UpdatedAt": {
+                                  "type": "string"
+                                },
+                                "DeletedAt": {
+                                  "type": "null"
+                                },
+                                "ID": {
+                                  "type": "string"
+                                },
+                                "Email": {
+                                  "type": "string"
+                                },
+                                "Password": {
+                                  "type": "string"
+                                },
+                                "FirstName": {
+                                  "type": "string"
+                                },
+                                "LastName": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "CreatedAt",
+                                "UpdatedAt",
+                                "DeletedAt",
+                                "ID",
+                                "Email",
+                                "Password",
+                                "FirstName",
+                                "LastName"
+                              ]
+                            },
+                            "Members": {
+                              "type": "null"
+                            },
+                            "Columns": {
+                              "type": "null"
+                            }
+                          },
+                          "required": [
+                            "CreatedAt",
+                            "UpdatedAt",
+                            "DeletedAt",
+                            "ID",
+                            "Name",
+                            "OwnerID",
+                            "Owner",
+                            "Members",
+                            "Columns"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "CreatedAt",
+                        "UpdatedAt",
+                        "DeletedAt",
+                        "ID",
+                        "Name",
+                        "board_id",
+                        "Board"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/columns/": {
+      "get": {
+        "summary": "get all",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "CreatedAt": {
+                            "type": "string"
+                          },
+                          "UpdatedAt": {
+                            "type": "string"
+                          },
+                          "DeletedAt": {
+                            "type": "null"
+                          },
+                          "ID": {
+                            "type": "string"
+                          },
+                          "Name": {
+                            "type": "string"
+                          },
+                          "board_id": {
+                            "type": "string"
+                          },
+                          "Board": {
+                            "type": "object",
+                            "properties": {
+                              "CreatedAt": {
+                                "type": "string"
+                              },
+                              "UpdatedAt": {
+                                "type": "string"
+                              },
+                              "DeletedAt": {
+                                "type": "null"
+                              },
+                              "ID": {
+                                "type": "string"
+                              },
+                              "Name": {
+                                "type": "string"
+                              },
+                              "OwnerID": {
+                                "type": "string"
+                              },
+                              "Owner": {
+                                "type": "object",
+                                "properties": {
+                                  "CreatedAt": {
+                                    "type": "string"
+                                  },
+                                  "UpdatedAt": {
+                                    "type": "string"
+                                  },
+                                  "DeletedAt": {
+                                    "type": "null"
+                                  },
+                                  "ID": {
+                                    "type": "string"
+                                  },
+                                  "Email": {
+                                    "type": "string"
+                                  },
+                                  "Password": {
+                                    "type": "string"
+                                  },
+                                  "FirstName": {
+                                    "type": "string"
+                                  },
+                                  "LastName": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "CreatedAt",
+                                  "UpdatedAt",
+                                  "DeletedAt",
+                                  "ID",
+                                  "Email",
+                                  "Password",
+                                  "FirstName",
+                                  "LastName"
+                                ]
+                              },
+                              "Members": {
+                                "type": "null"
+                              },
+                              "Columns": {
+                                "type": "null"
+                              }
+                            },
+                            "required": [
+                              "CreatedAt",
+                              "UpdatedAt",
+                              "DeletedAt",
+                              "ID",
+                              "Name",
+                              "OwnerID",
+                              "Owner",
+                              "Members",
+                              "Columns"
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/columns/{id}": {
+      "delete": {
+        "summary": "delete",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "4fbc885c-69eb-41db-a2e1-8edc761aa4ca",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "null"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/columns/board/{id}": {
+      "get": {
+        "summary": "get column by board id",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "1b01c7d7-3a41-4fa5-8c4a-962f9a666545",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "CreatedAt": {
+                            "type": "string"
+                          },
+                          "UpdatedAt": {
+                            "type": "string"
+                          },
+                          "DeletedAt": {
+                            "type": "null"
+                          },
+                          "ID": {
+                            "type": "string"
+                          },
+                          "Name": {
+                            "type": "string"
+                          },
+                          "board_id": {
+                            "type": "string"
+                          },
+                          "Board": {
+                            "type": "object",
+                            "properties": {
+                              "CreatedAt": {
+                                "type": "string"
+                              },
+                              "UpdatedAt": {
+                                "type": "string"
+                              },
+                              "DeletedAt": {
+                                "type": "null"
+                              },
+                              "ID": {
+                                "type": "string"
+                              },
+                              "Name": {
+                                "type": "string"
+                              },
+                              "OwnerID": {
+                                "type": "string"
+                              },
+                              "Owner": {
+                                "type": "object",
+                                "properties": {
+                                  "CreatedAt": {
+                                    "type": "string"
+                                  },
+                                  "UpdatedAt": {
+                                    "type": "string"
+                                  },
+                                  "DeletedAt": {
+                                    "type": "null"
+                                  },
+                                  "ID": {
+                                    "type": "string"
+                                  },
+                                  "Email": {
+                                    "type": "string"
+                                  },
+                                  "Password": {
+                                    "type": "string"
+                                  },
+                                  "FirstName": {
+                                    "type": "string"
+                                  },
+                                  "LastName": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "CreatedAt",
+                                  "UpdatedAt",
+                                  "DeletedAt",
+                                  "ID",
+                                  "Email",
+                                  "Password",
+                                  "FirstName",
+                                  "LastName"
+                                ]
+                              },
+                              "Members": {
+                                "type": "null"
+                              },
+                              "Columns": {
+                                "type": "null"
+                              }
+                            },
+                            "required": [
+                              "CreatedAt",
+                              "UpdatedAt",
+                              "DeletedAt",
+                              "ID",
+                              "Name",
+                              "OwnerID",
+                              "Owner",
+                              "Members",
+                              "Columns"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "CreatedAt",
+                          "UpdatedAt",
+                          "DeletedAt",
+                          "ID",
+                          "Name",
+                          "board_id",
+                          "Board"
+                        ]
+                      }
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/tasks/": {
+      "post": {
+        "summary": "create",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {
+                "name": "test task",
+                "description": "test desc",
+                "column_id": "83dece0d-adb5-48f8-b063-4aee38318ab0"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "CreatedAt": {
+                          "type": "string"
+                        },
+                        "UpdatedAt": {
+                          "type": "string"
+                        },
+                        "DeletedAt": {
+                          "type": "null"
+                        },
+                        "ID": {
+                          "type": "string"
+                        },
+                        "Name": {
+                          "type": "string"
+                        },
+                        "Description": {
+                          "type": "string"
+                        },
+                        "column_id": {
+                          "type": "string"
+                        },
+                        "Column": {
+                          "type": "object",
+                          "properties": {
+                            "CreatedAt": {
+                              "type": "string"
+                            },
+                            "UpdatedAt": {
+                              "type": "string"
+                            },
+                            "DeletedAt": {
+                              "type": "null"
+                            },
+                            "ID": {
+                              "type": "string"
+                            },
+                            "Name": {
+                              "type": "string"
+                            },
+                            "board_id": {
+                              "type": "string"
+                            },
+                            "Board": {
+                              "type": "object",
+                              "properties": {
+                                "CreatedAt": {
+                                  "type": "string"
+                                },
+                                "UpdatedAt": {
+                                  "type": "string"
+                                },
+                                "DeletedAt": {
+                                  "type": "null"
+                                },
+                                "ID": {
+                                  "type": "string"
+                                },
+                                "Name": {
+                                  "type": "string"
+                                },
+                                "OwnerID": {
+                                  "type": "string"
+                                },
+                                "Owner": {
+                                  "type": "object",
+                                  "properties": {
+                                    "CreatedAt": {
+                                      "type": "string"
+                                    },
+                                    "UpdatedAt": {
+                                      "type": "string"
+                                    },
+                                    "DeletedAt": {
+                                      "type": "null"
+                                    },
+                                    "ID": {
+                                      "type": "string"
+                                    },
+                                    "Email": {
+                                      "type": "string"
+                                    },
+                                    "Password": {
+                                      "type": "string"
+                                    },
+                                    "FirstName": {
+                                      "type": "string"
+                                    },
+                                    "LastName": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "CreatedAt",
+                                    "UpdatedAt",
+                                    "DeletedAt",
+                                    "ID",
+                                    "Email",
+                                    "Password",
+                                    "FirstName",
+                                    "LastName"
+                                  ]
+                                },
+                                "Members": {
+                                  "type": "null"
+                                },
+                                "Columns": {
+                                  "type": "null"
+                                }
+                              },
+                              "required": [
+                                "CreatedAt",
+                                "UpdatedAt",
+                                "DeletedAt",
+                                "ID",
+                                "Name",
+                                "OwnerID",
+                                "Owner",
+                                "Members",
+                                "Columns"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "CreatedAt",
+                            "UpdatedAt",
+                            "DeletedAt",
+                            "ID",
+                            "Name",
+                            "board_id",
+                            "Board"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "CreatedAt",
+                        "UpdatedAt",
+                        "DeletedAt",
+                        "ID",
+                        "Name",
+                        "Description",
+                        "column_id",
+                        "Column"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      },
+      "get": {
+        "summary": "get all",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "CreatedAt": {
+                            "type": "string"
+                          },
+                          "UpdatedAt": {
+                            "type": "string"
+                          },
+                          "DeletedAt": {
+                            "type": "null"
+                          },
+                          "ID": {
+                            "type": "string"
+                          },
+                          "Name": {
+                            "type": "string"
+                          },
+                          "Description": {
+                            "type": "string"
+                          },
+                          "column_id": {
+                            "type": "string"
+                          },
+                          "Column": {
+                            "type": "object",
+                            "properties": {
+                              "CreatedAt": {
+                                "type": "string"
+                              },
+                              "UpdatedAt": {
+                                "type": "string"
+                              },
+                              "DeletedAt": {
+                                "type": "null"
+                              },
+                              "ID": {
+                                "type": "string"
+                              },
+                              "Name": {
+                                "type": "string"
+                              },
+                              "board_id": {
+                                "type": "string"
+                              },
+                              "Board": {
+                                "type": "object",
+                                "properties": {
+                                  "CreatedAt": {
+                                    "type": "string"
+                                  },
+                                  "UpdatedAt": {
+                                    "type": "string"
+                                  },
+                                  "DeletedAt": {
+                                    "type": "null"
+                                  },
+                                  "ID": {
+                                    "type": "string"
+                                  },
+                                  "Name": {
+                                    "type": "string"
+                                  },
+                                  "OwnerID": {
+                                    "type": "string"
+                                  },
+                                  "Owner": {
+                                    "type": "object",
+                                    "properties": {
+                                      "CreatedAt": {
+                                        "type": "string"
+                                      },
+                                      "UpdatedAt": {
+                                        "type": "string"
+                                      },
+                                      "DeletedAt": {
+                                        "type": "null"
+                                      },
+                                      "ID": {
+                                        "type": "string"
+                                      },
+                                      "Email": {
+                                        "type": "string"
+                                      },
+                                      "Password": {
+                                        "type": "string"
+                                      },
+                                      "FirstName": {
+                                        "type": "string"
+                                      },
+                                      "LastName": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "CreatedAt",
+                                      "UpdatedAt",
+                                      "DeletedAt",
+                                      "ID",
+                                      "Email",
+                                      "Password",
+                                      "FirstName",
+                                      "LastName"
+                                    ]
+                                  },
+                                  "Members": {
+                                    "type": "null"
+                                  },
+                                  "Columns": {
+                                    "type": "null"
+                                  }
+                                },
+                                "required": [
+                                  "CreatedAt",
+                                  "UpdatedAt",
+                                  "DeletedAt",
+                                  "ID",
+                                  "Name",
+                                  "OwnerID",
+                                  "Owner",
+                                  "Members",
+                                  "Columns"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "CreatedAt",
+                              "UpdatedAt",
+                              "DeletedAt",
+                              "ID",
+                              "Name",
+                              "board_id",
+                              "Board"
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/tasks/{id}": {
+      "get": {
+        "summary": "get one by id",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "0c1302f2-1557-4575-8896-61d5c0075455",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "CreatedAt": {
+                          "type": "string"
+                        },
+                        "UpdatedAt": {
+                          "type": "string"
+                        },
+                        "DeletedAt": {
+                          "type": "null"
+                        },
+                        "ID": {
+                          "type": "string"
+                        },
+                        "Name": {
+                          "type": "string"
+                        },
+                        "Description": {
+                          "type": "string"
+                        },
+                        "column_id": {
+                          "type": "string"
+                        },
+                        "Column": {
+                          "type": "object",
+                          "properties": {
+                            "CreatedAt": {
+                              "type": "string"
+                            },
+                            "UpdatedAt": {
+                              "type": "string"
+                            },
+                            "DeletedAt": {
+                              "type": "null"
+                            },
+                            "ID": {
+                              "type": "string"
+                            },
+                            "Name": {
+                              "type": "string"
+                            },
+                            "board_id": {
+                              "type": "string"
+                            },
+                            "Board": {
+                              "type": "object",
+                              "properties": {
+                                "CreatedAt": {
+                                  "type": "string"
+                                },
+                                "UpdatedAt": {
+                                  "type": "string"
+                                },
+                                "DeletedAt": {
+                                  "type": "null"
+                                },
+                                "ID": {
+                                  "type": "string"
+                                },
+                                "Name": {
+                                  "type": "string"
+                                },
+                                "OwnerID": {
+                                  "type": "string"
+                                },
+                                "Owner": {
+                                  "type": "object",
+                                  "properties": {
+                                    "CreatedAt": {
+                                      "type": "string"
+                                    },
+                                    "UpdatedAt": {
+                                      "type": "string"
+                                    },
+                                    "DeletedAt": {
+                                      "type": "null"
+                                    },
+                                    "ID": {
+                                      "type": "string"
+                                    },
+                                    "Email": {
+                                      "type": "string"
+                                    },
+                                    "Password": {
+                                      "type": "string"
+                                    },
+                                    "FirstName": {
+                                      "type": "string"
+                                    },
+                                    "LastName": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "CreatedAt",
+                                    "UpdatedAt",
+                                    "DeletedAt",
+                                    "ID",
+                                    "Email",
+                                    "Password",
+                                    "FirstName",
+                                    "LastName"
+                                  ]
+                                },
+                                "Members": {
+                                  "type": "null"
+                                },
+                                "Columns": {
+                                  "type": "null"
+                                }
+                              },
+                              "required": [
+                                "CreatedAt",
+                                "UpdatedAt",
+                                "DeletedAt",
+                                "ID",
+                                "Name",
+                                "OwnerID",
+                                "Owner",
+                                "Members",
+                                "Columns"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "CreatedAt",
+                            "UpdatedAt",
+                            "DeletedAt",
+                            "ID",
+                            "Name",
+                            "board_id",
+                            "Board"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "CreatedAt",
+                        "UpdatedAt",
+                        "DeletedAt",
+                        "ID",
+                        "Name",
+                        "Description",
+                        "column_id",
+                        "Column"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      },
+      "put": {
+        "summary": "update",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "0c1302f2-1557-4575-8896-61d5c0075455",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {
+                "name": "test"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "CreatedAt": {
+                          "type": "string"
+                        },
+                        "UpdatedAt": {
+                          "type": "string"
+                        },
+                        "DeletedAt": {
+                          "type": "null"
+                        },
+                        "ID": {
+                          "type": "string"
+                        },
+                        "Name": {
+                          "type": "string"
+                        },
+                        "Description": {
+                          "type": "string"
+                        },
+                        "column_id": {
+                          "type": "string"
+                        },
+                        "Column": {
+                          "type": "object",
+                          "properties": {
+                            "CreatedAt": {
+                              "type": "string"
+                            },
+                            "UpdatedAt": {
+                              "type": "string"
+                            },
+                            "DeletedAt": {
+                              "type": "null"
+                            },
+                            "ID": {
+                              "type": "string"
+                            },
+                            "Name": {
+                              "type": "string"
+                            },
+                            "board_id": {
+                              "type": "string"
+                            },
+                            "Board": {
+                              "type": "object",
+                              "properties": {
+                                "CreatedAt": {
+                                  "type": "string"
+                                },
+                                "UpdatedAt": {
+                                  "type": "string"
+                                },
+                                "DeletedAt": {
+                                  "type": "null"
+                                },
+                                "ID": {
+                                  "type": "string"
+                                },
+                                "Name": {
+                                  "type": "string"
+                                },
+                                "OwnerID": {
+                                  "type": "string"
+                                },
+                                "Owner": {
+                                  "type": "object",
+                                  "properties": {
+                                    "CreatedAt": {
+                                      "type": "string"
+                                    },
+                                    "UpdatedAt": {
+                                      "type": "string"
+                                    },
+                                    "DeletedAt": {
+                                      "type": "null"
+                                    },
+                                    "ID": {
+                                      "type": "string"
+                                    },
+                                    "Email": {
+                                      "type": "string"
+                                    },
+                                    "Password": {
+                                      "type": "string"
+                                    },
+                                    "FirstName": {
+                                      "type": "string"
+                                    },
+                                    "LastName": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "CreatedAt",
+                                    "UpdatedAt",
+                                    "DeletedAt",
+                                    "ID",
+                                    "Email",
+                                    "Password",
+                                    "FirstName",
+                                    "LastName"
+                                  ]
+                                },
+                                "Members": {
+                                  "type": "null"
+                                },
+                                "Columns": {
+                                  "type": "null"
+                                }
+                              },
+                              "required": [
+                                "CreatedAt",
+                                "UpdatedAt",
+                                "DeletedAt",
+                                "ID",
+                                "Name",
+                                "OwnerID",
+                                "Owner",
+                                "Members",
+                                "Columns"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "CreatedAt",
+                            "UpdatedAt",
+                            "DeletedAt",
+                            "ID",
+                            "Name",
+                            "board_id",
+                            "Board"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "CreatedAt",
+                        "UpdatedAt",
+                        "DeletedAt",
+                        "ID",
+                        "Name",
+                        "Description",
+                        "column_id",
+                        "Column"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      },
+      "delete": {
+        "summary": "delete",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "0c1302f2-1557-4575-8896-61d5c0075455",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "null"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "health",
+        "deprecated": false,
+        "description": "route for check the server health",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "null"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "message",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {}
+  },
+  "servers": [],
+  "security": []
+}
