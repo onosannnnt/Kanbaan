@@ -1,0 +1,33 @@
+version: '3.1'
+
+services:
+  server:
+    restart: on-failure
+    container_name: kanban-server
+    build:
+      context: .
+      dockerfile: dockerfile
+    environment:
+      PORT: ${PORT}
+      DB_HOST: kanban-postgres
+      DB_PORT: 5432
+      DB_USER: ${DB_USER}
+      DB_PASSWORD:  ${DB_PASSWORD}
+      DB_SCHEMA: ${DB_SCHEMA}
+      JWT_SECRET: ${JWT_SECRET}
+    ports:
+      - "${PORT}:${PORT}"
+
+  postgres:
+    image: postgres:alpine
+    container_name: kanban-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_SCHEMA}
+    volumes:
+      - psql_volume_bp:/var/lib/postgresql/data
+volumes:
+  psql_volume_bp:
